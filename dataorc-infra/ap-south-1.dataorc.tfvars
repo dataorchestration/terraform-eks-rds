@@ -1,13 +1,13 @@
 #network
 namespace = "ng"
-name = "namami-gange"
+name = "dataorc-project"
 stage = "prod"
 region = "ap-south-1"
 vpc_cidr_block = "10.0.0.0/16"
 # database settting
-database_name = "namamigange"
-database_user = "namamigange"
-database_password = "randompassword123!"
+database_name = "database_name"
+database_user = "database_user"
+database_password = "database_password!"
 database_port = "5432"
 multi_az = "false"
 storage_type = "gp2"
@@ -18,7 +18,7 @@ engine_version = "11.11"
 major_engine_version = "11"
 instance_class = "db.m5.large"
 #kubernetes settings
-cluster_name = "namami-gange-eks-cluster"
+cluster_name = "cluster_name-eks-cluster"
 max_size_1 = 2
 max_size_2 = 2
 min_size_1 = 2
@@ -33,9 +33,9 @@ kubernetes_version = "1.19"
 apply_immediately = true
 availability_zones = [
   "ap-south-1a","ap-south-1b"]
-db_subnet_group_name = "db-namami-gange"
-parameter_group_name = "db-group-namami-gange"
-option_group_name = "db-option-group-namami-gange"
+db_subnet_group_name = "db-dataorc-project"
+parameter_group_name = "db-group-dataorc-project"
+option_group_name = "db-option-group-dataorc-project"
 db_parameter_group = "postgres11"
 kubernetes_labels_1 = {"node_group_num": "1"}
 kubernetes_labels_2 = {"node_group_num": "2"}
