@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ng-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: ng-aws.dataorc.in
+      http:
+        paths:
+          - backend:
+              serviceName: ng-frontend-service
+              servicePort: 80
+    - host: webserver.ng-aws.dataorc.in
+      http:
+        paths:
+          - backend:
+              serviceName: ng-webservice-service
+              servicePort: 5555
+    - host: metabase.ng-aws.dataorc.in
+      http:
+        paths:
+          - backend:
+              serviceName: ng-metabase-service
+              servicePort: 3000
